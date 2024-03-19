@@ -1,19 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- list_activity.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Sort buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_margin="10dp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/list_recycler_view"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/sort_button_id"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="4dp" />
+            android:layout_weight="1"
+            android:text="ID"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:background="@drawable/button_background" />
+
+        <Button
+            android:id="@+id/sort_button_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Name"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:background="@drawable/button_background" />
     </LinearLayout>
+
+    <!-- RecyclerView to display data -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#40FF9800"
+        android:padding="10dp"/>
 
 </LinearLayout>

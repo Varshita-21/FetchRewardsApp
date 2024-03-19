@@ -20,12 +20,13 @@
 
     <Button
         android:id="@+id/getData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="176dp"
+        android:layout_height="66dp"
         android:layout_below="@id/imageViewFetchRewards"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp"
-        android:background="#F9A719"
+        android:background="@drawable/button_background"
         android:fontFamily="sans-serif-black"
+        android:textSize="20dp"
         android:text="Fetch Data" />
 </RelativeLayout>

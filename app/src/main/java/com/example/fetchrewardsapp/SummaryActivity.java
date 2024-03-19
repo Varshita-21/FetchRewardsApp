@@ -25,7 +25,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class HomeActivity extends AppCompatActivity implements IDRecyclerViewAdapter.OnIDRecyclerViewClickListener {
+public class SummaryActivity extends AppCompatActivity implements IDRecyclerViewAdapter.OnIDRecyclerViewClickListener {
     private RecyclerView recyclerView;
     private ArrayList<String> listIDs = new ArrayList<>();
     private ArrayList<JSONArray> groupedJSONOnID = new ArrayList<>();
@@ -33,7 +33,7 @@ public class HomeActivity extends AppCompatActivity implements IDRecyclerViewAda
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_activity);
+        setContentView(R.layout.summary_activity);
 
         // Initialize RecyclerView
         recyclerView = findViewById(R.id.recyclerView);
@@ -63,14 +63,14 @@ public class HomeActivity extends AppCompatActivity implements IDRecyclerViewAda
                         } catch (JSONException e) {
                             e.printStackTrace();
                             // Show error message if JSON parsing fails
-                            Toast.makeText(HomeActivity.this, "Error parsing JSON", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SummaryActivity.this, "Error parsing JSON", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 // Show error message if data fetching fails
-                Toast.makeText(HomeActivity.this, "Data Fetch Failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SummaryActivity.this, "Data Fetch Failed", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -96,13 +96,13 @@ public class HomeActivity extends AppCompatActivity implements IDRecyclerViewAda
             groupDataByListID(sortedJsonArray);
 
             // Create and set RecyclerView adapter
-            IDRecyclerViewAdapter idRecyclerViewAdapter = new IDRecyclerViewAdapter(HomeActivity.this, listIDs, HomeActivity.this);
-            recyclerView.setLayoutManager(new LinearLayoutManager(HomeActivity.this));
+            IDRecyclerViewAdapter idRecyclerViewAdapter = new IDRecyclerViewAdapter(SummaryActivity.this, listIDs, SummaryActivity.this);
+            recyclerView.setLayoutManager(new LinearLayoutManager(SummaryActivity.this));
             recyclerView.setAdapter(idRecyclerViewAdapter);
         } catch (JSONException e) {
             e.printStackTrace();
             // Show error message if JSON processing fails
-            Toast.makeText(HomeActivity.this, "Error processing JSON", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SummaryActivity.this, "Error processing JSON", Toast.LENGTH_SHORT).show();
         }
     }
 

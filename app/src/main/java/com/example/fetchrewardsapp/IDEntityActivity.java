@@ -1,16 +1,16 @@
 package com.example.fetchrewardsapp;
 
 
-public class IDEntity {
+public class IDEntityActivity {
     String id;
     String name;
 
-    public IDEntity(String id, String name) {
+    public IDEntityActivity(String id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public IDEntity() {
+    public IDEntityActivity() {
     }
 
     public String getId() {

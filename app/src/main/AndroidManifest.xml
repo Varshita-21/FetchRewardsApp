@@ -21,13 +21,13 @@
         </activity>
 
         <!-- HomeActivity -->
-        <activity android:name=".HomeActivity"
+        <activity android:name=".SummaryActivity"
             android:parentActivityName=".MainActivity">
         </activity>
 
         <!-- ViewIDActivity -->
         <activity android:name=".ViewIDActivity"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".SummaryActivity">
         </activity>
 
     </application>
