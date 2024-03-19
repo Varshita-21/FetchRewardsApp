@@ -2,8 +2,6 @@ package com.example.fetchrewardsapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -46,7 +44,7 @@ public class ViewIDActivity extends AppCompatActivity {
 
             // Creating and setting up the adapter for the RecyclerView
             ViewIDAdapter viewIDAdapter = new ViewIDAdapter(this, arrayList);
-            recyclerView.setLayoutManager(new LinearLayoutManager(ViewIDActivity.this, LinearLayoutManager.VERTICAL, false));
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
             recyclerView.setAdapter(viewIDAdapter);
 
         } catch (JSONException e) {
@@ -55,4 +53,3 @@ public class ViewIDActivity extends AppCompatActivity {
 
     }
 }
-
