@@ -14,9 +14,9 @@ import java.util.ArrayList;
 public class ViewIDAdapter extends RecyclerView.Adapter<ViewIDAdapter.ViewHolder> {
 
     Context context;
-    ArrayList<IDEntity> idEntities;
+    ArrayList<IDEntityActivity> idEntities;
 
-    public ViewIDAdapter(Context context, ArrayList<IDEntity> idEntities) {
+    public ViewIDAdapter(Context context, ArrayList<IDEntityActivity> idEntities) {
         this.context = context;
         this.idEntities = idEntities;
     }
@@ -26,7 +26,7 @@ public class ViewIDAdapter extends RecyclerView.Adapter<ViewIDAdapter.ViewHolder
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
         // Inflate the layout for the list item
-        View view = layoutInflater.inflate(R.layout.row_list_ids, parent, false);
+        View view = layoutInflater.inflate(R.layout.row_id_name, parent, false);
         return new ViewHolder(view);
     }
 
